@@ -1,6 +1,6 @@
 # Hive Lab - pipeline to transform a csv file to an ORC file
 
-* create a drivers folder in hdfs home
+### create a drivers folder in hdfs home
 	hdfs dfs -mkdir drivers
 * get the driver.csv in our drivers folder
 	hdfs dfs -cp /data/drivers/drivers.csv drivers
