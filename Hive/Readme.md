@@ -31,7 +31,7 @@ LOCATION 'drivers_orc';
 
 
 ### check your csv table - select with limit ";" at the end
-SELECT * FROM erick_drivers_csv LIMIT 5
+SELECT * FROM erick_drivers_csv LIMIT 5;
 
 ### populate the orc table
 INSERT INTO TABLE erick_drivers_orc SELECT * FROM erick_drivers_csv;
