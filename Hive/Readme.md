@@ -40,3 +40,25 @@ INSERT INTO TABLE erick_drivers_orc SELECT * FROM erick_drivers_csv;
 	in the beeline prompt :
 	!run sql/selectCSVfile.sql
 	the sql script is in the edge server
+
+### Sql queries on hive
+
+	* look at the structure
+		
+imdb_name_basics
+imdb_title_basics
+imdb_title_crew
+imdb_title_ratings
+
+
+Write queries for the following:
+
+1) Number of titles with duration superior than 2 hours.
+		
+2) Average duration of titles containing the string "world".
+		
+3) Average rating of titles having the genre "Comedy".
+	
+4) Average rating of titles not having the genre "Comedy".
+	
+5) Top 5 movies by rating with director Quentin Tarantino
