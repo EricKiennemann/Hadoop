@@ -55,10 +55,10 @@ Write queries for the following:
 
 1) [Number of titles with duration superior than 2 hours.](sql/sql1.hql)
 		
-2) Average duration of titles containing the string "world".
+2) [Average duration of titles containing the string "world".](sql/sql2.hql)
 		
-3) Average rating of titles having the genre "Comedy".
+3) [Average rating of titles having the genre "Comedy".](sql/sql3.hql)
 	
-4) Average rating of titles not having the genre "Comedy".
+4) [Average rating of titles not having the genre "Comedy".](sql/sql4.hql)
 	
-5) Top 5 movies by rating with director Quentin Tarantino
+5) [Top 5 movies by rating with director Quentin Tarantino](sql/sql5.hql)
