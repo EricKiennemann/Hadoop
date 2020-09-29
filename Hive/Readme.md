@@ -43,12 +43,12 @@ INSERT INTO TABLE erick_drivers_orc SELECT * FROM erick_drivers_csv;
 
 ### Sql queries on hive
 
-	* look at the structure
+Look at the structure
 		
-imdb_name_basics
-imdb_title_basics
-imdb_title_crew
-imdb_title_ratings
+* imdb_name_basics
+* imdb_title_basics
+* imdb_title_crew
+* imdb_title_ratings
 
 
 Write queries for the following:
