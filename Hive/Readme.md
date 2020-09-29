@@ -53,7 +53,7 @@ Look at the structure
 
 Write queries for the following:
 
-1) [Number of titles with duration superior than 2 hours.](sql1.hql)
+1) [Number of titles with duration superior than 2 hours.](sql/sql1.hql)
 		
 2) Average duration of titles containing the string "world".
 		
