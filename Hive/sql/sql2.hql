@@ -1,0 +1,1 @@
+select avg(runtimeminutes) from imdb_title_basics where primarytitle like '%world%';

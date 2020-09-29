@@ -1,0 +1,1 @@
+select count(*) from imdb_title_basics where runtimeminutes > 120;
