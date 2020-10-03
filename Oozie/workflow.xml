@@ -1,0 +1,48 @@
+<workflow-app xmlns = "uri:oozie:workflow:0.4" name = "certified-drivers">
+  <global>
+    <job-tracker>${jobTracker}</job-tracker>
+    <name-node>${nameNode}</name-node>
+  </global>
+
+  <start to = "create_csv_table" />
+
+  <action name = "create_csv_table">
+    <hive2 xmlns = "uri:oozie:hive2-action:0.1">
+    	<job-tracker>${jobTracker}</job-tracker>
+	    <name-node>${nameNode}</name-node>
+      <jdbc-url>${jdbcUrl}</jdbc-url>
+      <script>scripts/create_table_csv.hql</script> <!-- This is a HDFS path -->
+    </hive2>
+    <ok to = "create_orc_table" /> <!-- points to the next action -->
+    <error to = "kill_job" />
+  </action>
+
+  <action name = "create_orc_table">
+    <hive2 xmlns = "uri:oozie:hive2-action:0.1">
+    	<job-tracker>${jobTracker}</job-tracker>
+	    <name-node>${nameNode}</name-node>
+      <jdbc-url>${jdbcUrl}</jdbc-url>
+      <script>scripts/create_table_orc.hql</script> <!-- This is a HDFS path -->
+    </hive2>
+    <ok to = "insert_data_orc" /> <!-- points to the next action -->
+    <error to = "kill_job" />
+  </action>
+
+  <action name = "insert_data_orc">
+    <hive2 xmlns = "uri:oozie:hive2-action:0.1">
+    	<job-tracker>${jobTracker}</job-tracker>
+	    <name-node>${nameNode}</name-node>
+      <jdbc-url>${jdbcUrl}</jdbc-url>
+      <script>scripts/insert_data_orc.hql</script> <!-- This is a HDFS path -->
+    </hive2>
+    <ok to = "end" /> <!-- points to the next action -->
+    <error to = "kill_job" />
+  </action>
+
+  <kill name = "kill_job">
+    <message>Job failed</message>
+  </kill>
+
+  <end name = "end" />
+</workflow-app>
+
