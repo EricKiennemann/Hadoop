@@ -11,3 +11,4 @@ In this Repositary the used skills are
 * Map Reduce
 * Hive
 * Oozie
+* HBase
