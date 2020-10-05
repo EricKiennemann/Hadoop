@@ -12,3 +12,4 @@ In this Repositary the used skills are
 * Hive
 * Oozie
 * HBase
+* Kafka
