@@ -1,5 +1,5 @@
 
-# Test Kafka functionality
+# Kafka workshop
 
 ## Define environment variable
 
@@ -28,4 +28,4 @@ ssh k.eric-dsti@edge-1.au.adaltas.cloud
 
 ## Result of topic "dsti_2020_fall_1
 
-![](.//images/kafka.jpg)
+![](.//images/Kafka.jpg)
